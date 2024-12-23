@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #1E60AA;
+    --bg-color: #f4faff;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.success-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    text-align: center;
+    padding: 30px;
+    width: 350px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards, slideUp 0.5s forwards;
+}
+
+.check-icon {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.check-icon::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 28px;
+    border: solid #fff;
+    border-width: 0 5px 5px 0;
+    transform: rotate(45deg);
+    top: 12px;
+    left: 26px;
+}
+
+h2 {
+    color: var(--text-color);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #002f64;;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
+}
+   
